@@ -59,4 +59,4 @@ while (1):
                 delivery_text = link.select(".select-size-link__availability")[0].attrs['title']
                 delivery_days = delivery_text_to_days(delivery_text)
             BIKE_AVAIL.labels(model=bike.model, size=size, color=bike.color, shifting=bike.shifting, gearing=bike.gearing).set(delivery_days)
-    time.sleep(60)
+    time.sleep(60 * 5)
