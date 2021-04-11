@@ -40,7 +40,13 @@ models = [
         Bike("grx800", "green", "di2", "2x11", "https://www.rosebikes.de/rose-backroad-grx-rx810-di2-2692731?product_shape=evil+pepper+green"),
         Bike("grx800", "purple", "di2", "2x11", "https://www.rosebikes.de/rose-backroad-grx-rx810-di2-2692731?product_shape=deepest+purple"),
         Bike("grx800", "green", "mech", "2x11", "https://www.rosebikes.de/rose-backroad-grx-rx810-2692729?product_shape=evil+pepper+green"),
-        Bike("grx800", "purple", "mech", "2x11", "https://www.rosebikes.de/rose-backroad-grx-rx810-2692729?product_shape=deepest+purple")
+        Bike("grx800", "purple", "mech", "2x11", "https://www.rosebikes.de/rose-backroad-grx-rx810-2692729?product_shape=deepest+purple"),
+        Bike("axs mullet", "purple", "di2", "1x11", "https://www.rosebikes.de/rose-backroad-axs-mullet-build-2692790?product_shape=deepest+purple"),
+        Bike("axs mullet", "green", "di2", "1x11", "https://www.rosebikes.de/rose-backroad-axs-mullet-build-2692790?product_shape=evil+pepper+green"),
+        Bike("force", "green", "mech", "1x11", "https://www.rosebikes.de/rose-backroad-force-1x11-2693158?product_shape=evil+pepper+green"),
+        Bike("force", "purple", "mech", "1x11", "https://www.rosebikes.de/rose-backroad-force-1x11-2693158?product_shape=deepest+purple"),
+        Bike("force etap", "purple", "di2", "1x11", "https://www.rosebikes.de/rose-backroad-force-etap-axs-1x12-2693102?product_shape=deepest+purple"),
+        Bike("force etap", "green", "di2", "1x11", "https://www.rosebikes.de/rose-backroad-force-etap-axs-1x12-2693102?product_shape=evil+pepper+green"),
         ]
 
 while (1):
@@ -59,4 +65,4 @@ while (1):
                 delivery_text = link.select(".select-size-link__availability")[0].attrs['title']
                 delivery_days = delivery_text_to_days(delivery_text)
             BIKE_AVAIL.labels(model=bike.model, size=size, color=bike.color, shifting=bike.shifting, gearing=bike.gearing).set(delivery_days)
-    time.sleep(60 * 5)
+    time.sleep(60 * 10)
