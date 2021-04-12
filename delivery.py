@@ -22,10 +22,9 @@ def delivery_text_to_days(text):
     if mm:
         weeks = int(mm.group(1))
         return weeks * 7
-    mm = WEEKS_REGEX.match(text)
+    mm = DAYS_REGEX.match(text)
     if mm:
         return int(mm.group(1))
-    
 
     return -1
         
