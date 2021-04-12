@@ -14,7 +14,7 @@ class Bike:
     link: str
 
 WEEKS_REGEX = re.compile("Lieferzeit\s(\d*)\sWochen")
-DAYS_REGEX = re.compile("Lieferzeit\s\d*\sbis\s(\d*)\sTage")
+DAYS_REGEX = re.compile("Lieferzeit\s\d*-(\d*)\sTage")
 EMAIL_TEXT = "E-Mail bei Verfügbarkeit"
 
 def delivery_text_to_days(text):
